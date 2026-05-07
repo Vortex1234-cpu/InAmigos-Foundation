@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+{% block title %}Contact Us — InAmigos Foundation{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}" />
+{% endblock %}
+
+{% block content %}
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+    <div class="page-hero-inner">
+        <div class="hero-badge">📩 Reach Out to Us</div>
+        <h1>Let's <em>Connect</em></h1>
+        <p>Have a question, partnership idea, or simply want to learn more? We'd love to hear from you.</p>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-grid">
+
+            <!-- LEFT: Info cards -->
+            <div class="contact-info reveal">
+                <div class="section-tag">Get in Touch</div>
+                <h2 class="section-title">We're Here<br />to <em>Help</em></h2>
+                <p class="section-sub">Whether you're a volunteer, donor, partner, or a curious human — drop us a line and we'll get back to you within 24 hours.</p>
+
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <div class="info-title">Our Address</div>
+                            <div class="info-text">Ward No. 5, Gram Post Sipat, Ujwal Nagar,<br />Bilaspur, Chhattisgarh – 495555</div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <div class="info-title">Phone</div>
+                            <div class="info-text"><a href="tel:+916267309902">+91 626 730 9902</a></div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">✉️</div>
+                        <div>
+                            <div class="info-title">Email</div>
+                            <div class="info-text"><a href="mailto:support@inamigosfoundation.org.in">support@inamigosfoundation.org.in</a></div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🕐</div>
+                        <div>
+                            <div class="info-title">Working Hours</div>
+                            <div class="info-text">Mon – Sat: 9:00 AM – 6:00 PM IST</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="social-row">
+                    <a href="https://www.instagram.com/inamigos/" target="_blank" class="social-btn">📸 Instagram</a>
+                    <a href="https://www.facebook.com/InAmigos/" target="_blank" class="social-btn">📘 Facebook</a>
+                    <a href="https://in.linkedin.com/company/inamigos-foundation" target="_blank" class="social-btn">💼 LinkedIn</a>
+                </div>
+            </div>
+
+            <!-- RIGHT: Form -->
+            <div class="contact-form-wrap reveal">
+                <div class="contact-form-card">
+                    <h3 class="form-title">Send Us a Message</h3>
+
+                    <form method="POST" action="{{ url_for('contact') }}" class="contact-form" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name <span class="req">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="Ramesh Kumar" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="req">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="ramesh@email.com" required />
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" />
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject <span class="req">*</span></label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">— Select a topic —</option>
+                                    <option>Volunteering</option>
+                                    <option>Donation / Funding</option>
+                                    <option>CSR Partnership</option>
+                                    <option>Internship / Training</option>
+                                    <option>Media &amp; Press</option>
+                                    <option>General Enquiry</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message <span class="req">*</span></label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us how we can help…" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-primary btn-full">🌱 Send Message</button>
+                    </form>
+                </div>
+
+                <!-- Newsletter strip -->
+                <div class="newsletter-strip">
+                    <div class="nl-text">
+                        <strong>Stay in the loop</strong>
+                        <span>Get monthly impact updates from InAmigos.</span>
+                    </div>
+                    <div class="nl-form">
+                        <input type="email" id="nl-email" placeholder="your@email.com" />
+                        <button id="nl-btn" class="btn-gold">Subscribe</button>
+                    </div>
+                    <p class="nl-msg" id="nl-msg"></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/contact.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,120 @@
+/* ═══════════════════════════════════════════════
+   InAmigos Foundation — contact.css
+═══════════════════════════════════════════════ */
+
+/* ─── PAGE HERO ─── */
+.page-hero {
+    min-height: 40vh;
+    background:
+        radial-gradient(ellipse at 60% 40%, rgba(37,168,98,.2) 0%, transparent 60%),
+        linear-gradient(160deg, #0b1a10 0%, #0f2a18 60%, #071209 100%);
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    padding: 9rem 2rem 4rem;
+    position: relative; overflow: hidden;
+}
+.page-hero-inner { max-width: 600px; }
+.page-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem); font-weight: 900;
+    color: #fff; line-height: 1.1; margin-bottom: 1rem;
+}
+.page-hero h1 em { font-style: normal; color: var(--gold-light); }
+.page-hero p { font-size: 1.05rem; color: rgba(255,255,255,.65); font-weight: 300; line-height: 1.7; }
+
+/* ─── CONTACT SECTION ─── */
+.contact-section { padding: 5rem 2rem; background: var(--cream); }
+.contact-grid {
+    display: grid; grid-template-columns: 1fr 1.35fr;
+    gap: 4rem; align-items: start;
+}
+
+/* Info side */
+.contact-info .section-sub { margin-bottom: 2rem; }
+.info-cards { display: flex; flex-direction: column; gap: 1rem; margin: 1.8rem 0; }
+.info-card {
+    display: flex; align-items: flex-start; gap: 1rem;
+    background: #fff; border-radius: 16px; padding: 1.2rem 1.4rem;
+    border: 1px solid rgba(0,0,0,.06);
+    transition: box-shadow .25s;
+}
+.info-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.07); }
+.info-icon { font-size: 1.4rem; line-height: 1; flex-shrink: 0; margin-top: .1rem; }
+.info-title { font-weight: 600; color: var(--dark); font-size: .88rem; margin-bottom: .25rem; letter-spacing: .02em; }
+.info-text { font-size: .86rem; color: var(--muted); line-height: 1.5; }
+.info-text a { color: var(--green); text-decoration: none; }
+.info-text a:hover { color: var(--gold); }
+.social-row { display: flex; gap: .7rem; flex-wrap: wrap; margin-top: .5rem; }
+.social-btn {
+    background: var(--green-pale); color: var(--green);
+    padding: .5rem 1.1rem; border-radius: 100px;
+    font-size: .8rem; font-weight: 500; text-decoration: none;
+    transition: all .2s;
+}
+.social-btn:hover { background: var(--green); color: #fff; }
+
+/* Form card */
+.contact-form-card {
+    background: #fff; border-radius: 24px; padding: 2.5rem;
+    box-shadow: 0 12px 40px rgba(0,0,0,.07);
+    border: 1px solid rgba(0,0,0,.05);
+}
+.form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem; font-weight: 700; color: var(--dark);
+    margin-bottom: 1.8rem;
+}
+.contact-form { display: flex; flex-direction: column; gap: 1.1rem; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.form-group { display: flex; flex-direction: column; gap: .4rem; }
+.form-group label {
+    font-size: .82rem; font-weight: 500; color: var(--mid);
+    letter-spacing: .03em; text-transform: uppercase;
+}
+.req { color: var(--green); }
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+    padding: .75rem 1rem;
+    border: 1.5px solid rgba(0,0,0,.1); border-radius: 12px;
+    font-family: inherit; font-size: .9rem; color: var(--text);
+    background: var(--white); outline: none; transition: border-color .2s;
+    resize: vertical;
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+    border-color: var(--green-light);
+    box-shadow: 0 0 0 3px rgba(37,168,98,.08);
+}
+
+/* Newsletter strip */
+.newsletter-strip {
+    background: var(--dark); border-radius: 18px;
+    padding: 1.5rem 1.8rem; margin-top: 1.2rem;
+}
+.nl-text { margin-bottom: 1rem; }
+.nl-text strong { display: block; color: #fff; font-size: .95rem; margin-bottom: .25rem; }
+.nl-text span { color: rgba(255,255,255,.5); font-size: .84rem; }
+.nl-form { display: flex; gap: .6rem; }
+.nl-form input {
+    flex: 1; padding: .65rem 1rem; border-radius: 10px;
+    border: 1px solid rgba(255,255,255,.15);
+    background: rgba(255,255,255,.08); color: #fff;
+    font-family: inherit; font-size: .88rem; outline: none;
+    transition: border-color .2s;
+}
+.nl-form input::placeholder { color: rgba(255,255,255,.35); }
+.nl-form input:focus { border-color: var(--green-light); }
+.nl-form .btn-gold { padding: .65rem 1.4rem; font-size: .88rem; }
+.nl-msg { font-size: .82rem; color: var(--gold-light); min-height: 1.1rem; margin-top: .5rem; }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 900px) {
+    .contact-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .form-row { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+    .nl-form { flex-direction: column; }
+    .contact-form-card { padding: 1.5rem; }
+}

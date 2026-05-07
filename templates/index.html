@@ -1,0 +1,190 @@
+{% extends "base.html" %}
+{% block title %}InAmigos Foundation — Together We Rise{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-inner">
+        <div class="hero-badge">🌱 Est. September 23, 2020 • Bilaspur, Chhattisgarh</div>
+        <h1>Together, We <em>Rise</em> &amp;<br />Transform Lives</h1>
+        <p>InAmigos Foundation is a Section 8 registered non-profit working across India — feeding the hungry,
+            educating children, empowering women, and healing the planet.</p>
+        <div class="hero-btns">
+            <a href="#join" class="btn-primary">🤝 Become an Amigo</a>
+            <a href="#projects" class="btn-outline">Explore Our Work ↓</a>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <span class="stat-number">50,000+</span>
+                <span class="stat-label">Meals Distributed</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">30,000+</span>
+                <span class="stat-label">Interns Trained</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">200+</span>
+                <span class="stat-label">Volunteers Nationwide</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">6</span>
+                <span class="stat-label">Flagship Projects</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="reveal">
+                <div class="section-tag">Who We Are</div>
+                <h2 class="section-title">A Movement<br />Rooted in <em>Compassion</em></h2>
+                <p class="section-sub">Founded by Mr. Govind Shukla, InAmigos Foundation believes every person
+                    deserves dignity, opportunity, and belonging — regardless of their background.</p>
+                <div class="badges">
+                    <span class="badge">✔ Section 8 Registered</span>
+                    <span class="badge">✔ 80G &amp; 12A Certified</span>
+                    <span class="badge">✔ CSR-1 Registered</span>
+                    <span class="badge">✔ NITI Aayog Registered</span>
+                    <span class="badge">✔ ISO 9001:2015 Certified</span>
+                </div>
+                <div class="founded-note">
+                    <strong>Our Mission:</strong> To serve communities compassionately and create opportunities for
+                    every underprivileged person to grow with dignity and respect — across education, welfare,
+                    women's empowerment, environment, and livelihood.
+                </div>
+            </div>
+            <div class="about-visual reveal">
+                <div class="about-card">
+                    <div class="about-card-quote">"At InAmigos Foundation, we believe in the power of collective
+                        action. Every contribution is directed towards essential causes and lasting social change."
+                    </div>
+                    <div class="about-card-attr">— Mr. Govind Shukla, Founder &amp; CEO</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="container">
+        <div class="projects-header reveal">
+            <div class="section-tag">Our Initiatives</div>
+            <h2 class="section-title">6 Projects, One <em>Purpose</em></h2>
+            <p class="section-sub">Each project targets a root cause of inequality — together they form a holistic
+                ecosystem of change across India.</p>
+        </div>
+        <div class="projects-grid">
+            {% set projects = [
+                ("🍱","SEVA","Providing nutritious food and clothing to the homeless and underprivileged. No one sleeps hungry — that's our promise.","50,000+ Meals Distributed"),
+                ("📚","BACHPANSHALA","Bridging educational gaps for underprivileged children through digital literacy, life skills, and school education support.","Education for All"),
+                ("👩‍💼","UDAAN","Empowering women through skill development, financial independence, and livelihood creation programs.","Women's Empowerment"),
+                ("🌿","PRAKRITI","Environmental conservation and sustainability efforts — protecting our planet for future generations.","Go Green Initiative"),
+                ("🐾","JEEV","Animal welfare through regular feeding drives and care activities, because compassion extends to every living being.","Animal Welfare"),
+                ("💼","VIKAS","Enhancing employability and professional skills for youth through structured internship and training programs across India.","30,000+ Interns Trained")
+            ] %}
+            {% for icon, name, desc, impact in projects %}
+            <div class="proj-card reveal">
+                <div class="proj-icon-wrap"><div class="proj-icon">{{ icon }}</div></div>
+                <div class="proj-body">
+                    <div class="proj-name">Project <span>{{ name }}</span></div>
+                    <p class="proj-desc">{{ desc }}</p>
+                    <span class="proj-impact">{{ impact }}</span>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact">
+    <div class="container impact-inner">
+        <div class="reveal" style="text-align:center">
+            <div class="section-tag" style="color:var(--gold-light);border-color:var(--gold-light)">Our Social Impact</div>
+            <h2 class="section-title" style="color:#fff">Real Change,<br /><em style="color:var(--gold-light)">Real Numbers</em></h2>
+            <p class="section-sub" style="margin:0 auto">Our work spans multiple states — Chhattisgarh, Delhi,
+                Maharashtra, Uttar Pradesh, and Madhya Pradesh — touching thousands of lives every year.</p>
+        </div>
+        <div class="impact-grid reveal">
+            <div class="impact-item"><span class="impact-number">50K+</span><div class="impact-desc">Meals &amp; Clothing Distributed</div></div>
+            <div class="impact-item"><span class="impact-number">30K+</span><div class="impact-desc">Youth Trained Under Vikas</div></div>
+            <div class="impact-item"><span class="impact-number">200+</span><div class="impact-desc">Volunteers Across India</div></div>
+            <div class="impact-item"><span class="impact-number">5+</span><div class="impact-desc">States Impacted</div></div>
+        </div>
+        <div class="mission-cards reveal">
+            <div class="mission-card">
+                <div class="mission-card-icon">🤝</div>
+                <div class="mission-card-title">Community First</div>
+                <div class="mission-card-text">We work closely with government welfare departments during relief work, ensuring resources reach the most vulnerable.</div>
+            </div>
+            <div class="mission-card">
+                <div class="mission-card-icon">🔍</div>
+                <div class="mission-card-title">Full Transparency</div>
+                <div class="mission-card-text">80G &amp; 12A certified — your donations are tax-exempt and every rupee is accounted for with full accountability.</div>
+            </div>
+            <div class="mission-card">
+                <div class="mission-card-icon">🌐</div>
+                <div class="mission-card-title">National Reach</div>
+                <div class="mission-card-text">NITI Aayog registered and CSR-1 approved, our partnerships extend our impact across corporate and government ecosystems.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- JOIN / CTA -->
+<section id="join">
+    <div class="container">
+        <div class="cta-box reveal">
+            <div class="section-tag" style="color:var(--gold-light);border-color:var(--gold-light)">Join the Movement</div>
+            <h2 class="section-title">Every Action <em>Counts</em></h2>
+            <p class="section-sub">Whether you volunteer, donate, or simply spread the word — you become an Amigo.
+                Together we create a more inclusive, compassionate, and empowered India.</p>
+
+            <!-- Volunteer quick-form -->
+            <div class="volunteer-form reveal" id="volunteerForm">
+                <h3 class="vf-title">🙋 Sign Up to Volunteer</h3>
+                <div class="vf-grid">
+                    <input type="text"  id="vf-name"     placeholder="Your Name *"  class="vf-input" />
+                    <input type="email" id="vf-email"    placeholder="Email *"       class="vf-input" />
+                    <input type="tel"   id="vf-phone"    placeholder="Phone"         class="vf-input" />
+                    <input type="text"  id="vf-city"     placeholder="City"          class="vf-input" />
+                </div>
+                <select id="vf-interest" class="vf-input vf-select">
+                    <option value="">— Area of Interest —</option>
+                    <option>Project SEVA (Food &amp; Clothing)</option>
+                    <option>Project BACHPANSHALA (Education)</option>
+                    <option>Project UDAAN (Women Empowerment)</option>
+                    <option>Project PRAKRITI (Environment)</option>
+                    <option>Project JEEV (Animal Welfare)</option>
+                    <option>Project VIKAS (Youth Training)</option>
+                    <option>General / Any</option>
+                </select>
+                <button class="btn-primary vf-btn" id="vf-submit">🤝 Join as Volunteer</button>
+                <p class="vf-msg" id="vf-msg"></p>
+            </div>
+
+            <div class="cta-actions" style="margin-top:2rem;">
+                <a href="https://inamigosfoundation.org.in/" target="_blank" class="btn-gold">💛 Donate Now</a>
+                <a href="{{ url_for('contact') }}" class="btn-primary">📩 Contact Us</a>
+                <a href="https://www.instagram.com/inamigos/" target="_blank" class="btn-outline"
+                    style="border-color:rgba(255,255,255,.25);color:rgba(255,255,255,.7)">📲 Follow #InAmigos</a>
+            </div>
+            <p style="margin-top:2.5rem;color:rgba(255,255,255,.35);font-size:.83rem;">
+                📍 Ward No. 5, Gram Post Sipat, Ujwal Nagar, Bilaspur, Chhattisgarh – 495555 &nbsp;|&nbsp;
+                📞 +91 626 730 9902 &nbsp;|&nbsp;
+                ✉️ support@inamigosfoundation.org.in
+            </p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block extra_js %}
+<script src="{{ url_for('static', filename='js/volunteer.js') }}"></script>
+{% endblock %}
